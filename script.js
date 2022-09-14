@@ -9,3 +9,14 @@ loginBtn.addEventListener('click', () => {
     alert('Email ou senha inválidos.');
   }
 });
+
+const counter = document.getElementById('counter');
+const textArea = document.getElementById('feedback');
+
+textArea.addEventListener('input', () => {
+  if (textArea.value === null) {
+    let count = 0;
+    count += 1;
+    counter.innerText -= count;
+  }
+});
