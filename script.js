@@ -12,7 +12,6 @@ loginBtn.addEventListener('click', () => {
   }
 });
 
-<<<<<<< HEAD
 const counter = document.getElementById('counter');
 const textArea = document.getElementById('feedback');
 
@@ -23,7 +22,7 @@ textArea.addEventListener('input', () => {
     counter.innerText -= count;
   }
 });
-=======
+
 const unchecked = () => {
   if (agreement.checked === true) {
     submitBtn.disabled = false;
@@ -34,4 +33,3 @@ const unchecked = () => {
 
 agreement.addEventListener('click', unchecked);
 unchecked();
->>>>>>> 6f1443c01fabe32eb38f6f24768584bf966e4b1a
