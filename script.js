@@ -32,9 +32,9 @@ textArea.addEventListener('input', (e) => {
   counter.innerText = count;
 });
 
-submitBtn.addEventListener('click', () => {
-  let formResults = document.querySelector('#evaluation-form');
-  for (let i = 0; i < formResults.length; i += 1) {
-    formResults += formResults.elements[i].value + '<br>';
-  }
-});
+// submitBtn.addEventListener('click', () => {
+//   let formResults = document.querySelector('#evaluation-form');
+//   for (let i = 0; i < formResults.length; i += 1) {
+//     formResults += formResults.elements[i].value + '<br>';
+//   }
+// });
