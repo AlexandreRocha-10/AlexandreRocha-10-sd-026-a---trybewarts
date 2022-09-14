@@ -12,17 +12,6 @@ loginBtn.addEventListener('click', () => {
   }
 });
 
-const counter = document.getElementById('counter');
-const textArea = document.getElementById('feedback');
-
-textArea.addEventListener('input', () => {
-  if (textArea.value === null) {
-    let count = 0;
-    count += 1;
-    counter.innerText -= count;
-  }
-});
-
 const unchecked = () => {
   if (agreement.checked === true) {
     submitBtn.disabled = false;
@@ -33,3 +22,12 @@ const unchecked = () => {
 
 agreement.addEventListener('click', unchecked);
 unchecked();
+
+const counter = document.getElementById('counter');
+const textArea = document.getElementById('feedback');
+
+textArea.addEventListener('input', (e) => {
+  const caracter = e.target;
+  const count = 500 - caracter.value.length;
+  counter.innerText = count;
+});
