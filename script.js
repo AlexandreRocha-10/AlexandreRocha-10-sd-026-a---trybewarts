@@ -3,9 +3,9 @@ const emailInput = document.querySelector('#email-input');
 const passwordInput = document.querySelector('#password-input');
 
 loginBtn.addEventListener('click', () => {
-  if (emailInput === 'tryber@teste.com' && passwordInput === '123456') {
+  if (emailInput.value === 'tryber@teste.com' && passwordInput.value === '123456') {
     alert('Olá, Tryber!');
   } else {
-    alert('Email ou senha inválidos');
+    alert('Email ou senha inválidos.');
   }
 });
