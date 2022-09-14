@@ -20,3 +20,11 @@
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+#input-name {
+  align-self: center;
+}
+
+#input-lastname {
+  align-self: center;
+}
