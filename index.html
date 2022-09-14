@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrybeWarts</title>
+    <link rel="stylesheet" href="libs/bootstrap-5.2.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +13,9 @@
         <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="Logo Trybewarts">
         <h1 id="trybewarts-header-title">Trybewarts</h1>
         <form class="trybewarts-login" action="">
-            <input id="email-input" type="email" name="email" placeholder="Email">
-            <input id="password-input" type="password" name="password" placeholder="Senha">
-            <button type="submit" id="login-button">Entrar</button>
+            <input id="email-input" type="email" name="email" placeholder="Email" class="login">
+            <input id="password-input" type="password" name="password" placeholder="Senha" class="login">
+            <button type="submit" id="login-button" class="btn btn-primary">Entrar</button>
         </form>
     </header>
     <main id="main-container">
@@ -57,13 +58,23 @@
                 <input type="radio" name="rate" value="10">
             </div>
             <label for="textarea" class="textarea">Deixe seu comentário:</label>
+<<<<<<< HEAD
             <textarea name="feedback" cols="30" rows="10" maxlength="500" id="feedback"></textarea>
             <span id="counter">500</span>
+=======
+            <textarea name="feedback" cols="30" rows="10" maxlength="500"></textarea>
+            <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
+            <input type="checkbox" id="agreement">
+            <button type="submit" id="submit-btn">Enviar</button>
+>>>>>>> 6f1443c01fabe32eb38f6f24768584bf966e4b1a
         </form>
         <aside>
             <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Logo Trybewarts">
         </aside>
     </main>
+    <footer>
+        Direitos reservados à Trybewarts©
+    </footer>
     
     <script src="script.js"></script>
 </body>
