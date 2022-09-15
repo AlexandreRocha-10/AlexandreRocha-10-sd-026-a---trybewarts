@@ -32,9 +32,32 @@ textArea.addEventListener('input', (e) => {
   counter.innerText = count;
 });
 
-// submitBtn.addEventListener('click', () => {
-//   let formResults = document.querySelector('#evaluation-form');
-//   for (let i = 0; i < formResults.length; i += 1) {
-//     formResults += formResults.elements[i].value + '<br>';
-//   }
-// });
+const form = document.querySelector('#evaluation-form');
+const formData = document.querySelector('#form-data');
+
+const createElement = (e) => {
+  const newDiv = document.createElement('div');
+  newDiv.innerText = e;
+  formData.appendChild(newDiv);
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = new FormData(form).get('name');
+  const lastname = new FormData(form).get('lastname');
+  const email = new FormData(form).get('email');
+  const house = new FormData(form).get('house');
+  const family = new FormData(form).get('family');
+  const subjects = new FormData(form).getAll('subject');
+  const rate = new FormData(form).get('rate');
+  const feedback = new FormData(form).get('feedback');
+  createElement(`Nome: ${name} ${lastname}`);
+  createElement(`Email: ${email}`);
+  createElement(`Casa: ${house}`);
+  createElement(`Família: ${family}`);
+  createElement(`Matérias: ${subjects.join(', ')}`);
+  createElement(`Avaliação: ${rate}`);
+  createElement(`Observações: ${feedback}`);
+  form.style.display = 'none';
+  formData.style.display = 'block';
+});
